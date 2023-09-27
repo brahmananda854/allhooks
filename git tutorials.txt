@@ -1,0 +1,158 @@
+GIT & GIT HUB
+************************************
+1. Version control system is a tools that helps to track chnages in code
+Its popular free and open source and fast and scalable
+
+2.It help us to collaborate in team to develop code with out any overwrite
+
+3. GITHUB
+**********
+Website that allows developers to store and managetheir code using GIT.
+Folder like structure called reposetory or repo
+to create profile use gmail/emil ID
+in this website go to your repository and crete new repo with public or private
+initial commit means your first time changes that tracks GIT
+
+4.ADD and commit -->Add means to stage the changes and commit means 
+to take the screenshot or store version. 
+
+Setting up Git
+
+VS code
+GIT Bash
+
+git --version ----->>> to check the version of GIT
+
+5.Configure GIT
+********
+git config --global user.name "github name"
+git config --global user.email "bdash004@gmail.com(git account email)"
+git config --list
+~ root folder root directory
+
+7.go to terminal of VS code 
+Clone and status
+***************************
+Local ---Laptop or computer
+Remote --- GUTHUB account(repo)
+Clone --Cloning a repo on our local machine from github account
+git clone "https://github.com/brahmnanda"  it will fetch all folders to local folder
+status -- display the staus of code 
+git status
+cd(change directory)
+to go back cd..
+to see all files ls
+to see hidden files ls -a
+if we modify the file in our local machine then it will show mdified
+so to commit it we need to do add and commit
+
+8. Status of files in GIT
+****************************
+untracked--means files are not tracked by git and changes are only in local machine
+modified---means changes are modified and tracked by git 
+staged ---file is added and staged for commit
+unmodified---files are unchanged
+change with existing files means modified and new file untracked
+Add (staged)
+commit(files are unchanged and git took the screenshot)
+git add filename (git add .) to add all files at once
+git commit -m "your messages"
+
+9.your banch is ahead of existing branch means we have already taken the 
+screenshot and it is diffrent from github.com code so to make it we use push cmd
+from local to remote
+git push origin main
+
+origin main is the default repo and main is the branch name 
+we will bydefault push to origin main
+
+10.Now suppose we want to push newly created local machine codes to github.com
+we use Init command
+init - used to create new got repo
+git init (will create a new repo in local machine)
+git add .
+git commit -m "Initial files message"
+
+to push to github.com we will crete a new repo in github.com 
+
+now  to connect with git hub in VS code in local machine
+--git remote add origin https://github.com/mycode1/localrepo.git 
+
+to verify remote--- remote -v
+
+git branch(to check branch) diffrent develpoers crete diffrent branches and work 
+accordingly
+
+11. to rename Branch --git branch -M main
+now our branch renamed to main branch
+git push -u origin main ( if we want to push to origin main later on then we use -u)
+
+12. WORKFLOW
+***********************
+Local Git 
+
+Github repo-->clone-->changes -->add-->commit--->push
+
+
+13. GIT Branches
+*******************
+suppose we want to work on diffrent features of code then we will create separate
+branches then work on it then mearge to master later on
+to check branch --- git branch 
+to change name -- git -m main
+---git checkout branchname (to navigate to new branch)
+---git checkout -b branchname(to create new branch)
+---git branch -d branchname(to delete branch) note--we cannot delete the branch on which 
+we are currently checkout to 
+we want to push to github.com --git push origin feature1
+
+
+14.IF we want to mearge with main branch to feature branches then (2 ways)
+---git diff otherbranch 
+---git mearge currentbranch
+
+second way is to create Pull Reqest(PR)
+
+Pull Request --- It lets you tell others about changes you've pushed to a branch
+in a repository on git hub
+my branch ---->>>> main Branch (review our PR by manager)
+
+on GITHUB click compare and pull request to to mearge your feature1 codes with main or vice versa
+ Now the changes will appear on guthub but not on local machine for main branchs
+to get the code in local machine
+---git pull origin main (used to fetch and download content from a remote repo and immediately update
+the local repo to match that content)
+
+15. Resolving merge conflicts
+********************************************
+An event that takes place when Git is unable to automatically resolve diffrences in code betwwen two commits
+---git mearge main
+mearge conflicts will be there which automatically VS code cannot resolve 
+so we need to finalize which one to keep
+
+16.UNDoing changes
+*********************
+
+case 1 : staged changes
+---git reset filename
+---git reset
+
+case 2 : commited changes (for one commit)
+---git reset HEAD~1  (reset head to 1 step)
+
+case 3 : commited changes (for many commits)
+---git reset <--commit hash-->
+---git reset --hard  <--commit hash-->  to get back to 3 step then copy and paste the hashvalue
+git log (shows hash keys)
+
+
+17.FORK
+*************
+completely rough copy of another project 
+we want to completely copy and paste repo then we will do fork
+if we want to put our changes to that persons code then we will do pull request
+
+
+
+
+
